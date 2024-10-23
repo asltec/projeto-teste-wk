@@ -31,6 +31,8 @@ export class ClientesFacade {
             this.toastrService.success("Cliente atualizado com sucesso!");
             this.rotaListagemClientes();
         });
+
+        return clienteUpdate
     }
 
     public deleteCliente(id: string) {
@@ -38,6 +40,8 @@ export class ClientesFacade {
             this.toastrService.success("Cliente deletado com sucesso!");
             this.rotaListagemClientes();
         });
+
+        return deleteCliente;
     }
 
     private rotaListagemClientes() {
