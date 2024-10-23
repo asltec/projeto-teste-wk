@@ -1,1 +1,32 @@
-<p>produtos-form works!</p>
+<div class="container">
+
+    <form [formGroup]="produtosForm" (ngSubmit)="submit()">
+        <mat-card class="card">
+
+            <mat-card-header class="mat-card-header">Cadastro de Produtos</mat-card-header>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Descriçao</mat-label>
+                <input matInput formControlName="descricao">
+                <mat-error>
+                    Descriçao Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Valor Unitário</mat-label>
+                <input matInput formControlName="valor_unitario">
+                <mat-error>
+                    Valor Unitário Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <div class="div-button-submit">
+                <button mat-stroked-button (click)="rotaListagemProdutos()">Voltar</button>
+                <button mat-stroked-button class="button-submit" type="submit">Gravar</button>
+            </div>
+
+        </mat-card>
+
+    </form>
+</div>

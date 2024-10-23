@@ -12,5 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
 export class ButtonsListComponent {
 
   @Output() edit = new EventEmitter<string>();
+  @Output() delete = new EventEmitter<string>();
 
 }

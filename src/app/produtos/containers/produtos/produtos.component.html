@@ -1,1 +1,2 @@
-<p>produtos works!</p>
+<app-menu-form (add)="rotaAdicionarProduto()" [labelButton]="'Add Produto'"></app-menu-form>
+<app-produtos-list [produtos]="facade.produtos$ | async" (editar)="rotaEditarProduto($event)"></app-produtos-list>

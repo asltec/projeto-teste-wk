@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class MenuFormComponent {
 
+  @Input() labelButton: string;
   @Output() add = new EventEmitter();
 
 }

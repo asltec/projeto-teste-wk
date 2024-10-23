@@ -1,1 +1,31 @@
-<p>produtos-list works!</p>
+<div>
+    <h3 class="h3">Listagem de Produtos</h3>
+    <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+    
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+    
+        <ng-container matColumnDef="descricao">
+            <th mat-header-cell *matHeaderCellDef> Descrição </th>
+            <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+        </ng-container>
+    
+    
+        <ng-container matColumnDef="valor_unitario">
+            <th mat-header-cell *matHeaderCellDef> Valor Unitário </th>
+            <td mat-cell *matCellDef="let element"> {{element.valor_unitario}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let element">
+                <app-buttons-list (edit)="editar.emit(element.id)"></app-buttons-list>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

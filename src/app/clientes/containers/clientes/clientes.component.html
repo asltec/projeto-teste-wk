@@ -1,2 +1,2 @@
-<app-menu-form (add)="rotaAdicionarCliente()"></app-menu-form>
+<app-menu-form (add)="rotaAdicionarCliente()" [labelButton]="'Add Cliente'"></app-menu-form>
 <app-clientes-list [clientes]="facade.clientes$ | async" (editar)="rotaEditarCliente($event)"></app-clientes-list>
