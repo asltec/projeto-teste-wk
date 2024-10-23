@@ -15,7 +15,7 @@
 
             <mat-form-field class="form-field form-fields" appearance="outline">
                 <mat-label>Valor Unitário</mat-label>
-                <input matInput formControlName="valor_unitario">
+                <input matInput formControlName="valor_unitario" [currencyMask]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }">
                 <mat-error>
                     Valor Unitário Obrigatório
                 </mat-error>

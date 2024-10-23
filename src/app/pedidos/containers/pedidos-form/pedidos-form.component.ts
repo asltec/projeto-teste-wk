@@ -13,6 +13,8 @@ import { ProdutosApi } from '../../../produtos/api/produtos.api';
 import { ProdutosFacade } from '../../../produtos/produtos.facade';
 import { ClientesApi } from '../../../clientes/api/clientes.api';
 import { ClientesFacade } from '../../../clientes/clientes.facade';
+import { NgxCurrencyDirective } from "ngx-currency";
+
 
 @Component({
   selector: 'app-pedidos-form',
@@ -24,7 +26,8 @@ import { ClientesFacade } from '../../../clientes/clientes.facade';
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxCurrencyDirective
   ],
   providers: [PedidosApi, PedidosFacade, ProdutosApi, ProdutosFacade, ClientesApi, ClientesFacade],
   templateUrl: './pedidos-form.component.html',

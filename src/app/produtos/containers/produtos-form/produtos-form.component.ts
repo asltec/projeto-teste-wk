@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { NgxCurrencyDirective } from "ngx-currency";
 
 @Component({
   selector: 'app-produtos-form',
@@ -18,7 +19,8 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxCurrencyDirective
   ],
   providers: [ProdutosApi, ProdutosFacade],
   templateUrl: './produtos-form.component.html',

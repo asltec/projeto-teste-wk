@@ -2,11 +2,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Produto } from '../../models/produtos.model';
 import { ButtonsListComponent } from '../../../shared/components/buttons-list/buttons-list.component';
 import { MatTableModule } from '@angular/material/table';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-produtos-list',
   standalone: true,
-  imports: [MatTableModule, ButtonsListComponent],
+  imports: [MatTableModule, ButtonsListComponent, CurrencyPipe],
   templateUrl: './produtos-list.component.html',
   styleUrl: './produtos-list.component.scss'
 })

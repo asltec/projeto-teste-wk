@@ -16,7 +16,7 @@
     
         <ng-container matColumnDef="valor_unitario">
             <th mat-header-cell *matHeaderCellDef> Valor Unitário </th>
-            <td mat-cell *matCellDef="let element"> {{element.valor_unitario}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.valor_unitario | currency: 'R$'}} </td>
         </ng-container>
     
         <ng-container matColumnDef="acoes">
