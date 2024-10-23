@@ -1,0 +1,34 @@
+.container {
+    height: 36vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 173px 0px;
+    margin-top: -46px;
+}
+
+.card {
+    width: 550px;
+    height: 415px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-fields {
+    width: 500px;
+}
+
+.div-button-submit {
+    margin-left: 329px;
+}
+
+.button-submit {
+    margin-left: 10px;
+    background-color: #EF4E36;
+    color: white;
+}
+
+.mat-card-header {
+    margin-bottom: 10px;
+}

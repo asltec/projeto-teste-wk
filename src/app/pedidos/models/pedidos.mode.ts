@@ -1,7 +1,8 @@
+
 export class Pedido {
-    id!: number;
-    data!: string;
-    id_cliente!: number;
-    id_produto!: number;
-    total!: number;
+    id: string;
+    data: string;
+    cliente: string;
+    produto: string;
+    total: string;
 }

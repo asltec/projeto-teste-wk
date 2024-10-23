@@ -1,0 +1,57 @@
+<div class="container">
+
+    <form [formGroup]="pedidosForm" (ngSubmit)="submit()">
+        <mat-card class="card">
+
+            <mat-card-header class="mat-card-header">Cadastro de Pedidos</mat-card-header>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Data Pedido</mat-label>
+                <input matInput type="date" formControlName="data">
+                <mat-error>
+                    Descriçao Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Cliente</mat-label>
+                <mat-select formControlName="cliente">
+                    @for (cliente of facadeClientes.clientes$ | async; track cliente) {
+                      <mat-option [value]="cliente.nome">{{cliente.nome}}</mat-option>
+                    }
+                  </mat-select>
+                <mat-error>
+                    Cliente Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Produto</mat-label>
+                <mat-select formControlName="produto">
+                    @for (produto of facadeProdutos.produtos$ | async; track produto) {
+                      <mat-option [value]="produto.descricao">{{produto.descricao}}</mat-option>
+                    }
+                  </mat-select>
+                <mat-error>
+                    Produto Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field form-fields" appearance="outline">
+                <mat-label>Valor Total</mat-label>
+                <input matInput formControlName="total">
+                <mat-error>
+                    Valor Total Obrigatório
+                </mat-error>
+            </mat-form-field>
+
+            <div class="div-button-submit">
+                <button mat-stroked-button (click)="rotaListagemPedidos()">Voltar</button>
+                <button mat-stroked-button class="button-submit" type="submit">Gravar</button>
+            </div>
+
+        </mat-card>
+
+    </form>
+</div>
+

@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Produto } from "./models/produtos.model";
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ProdutosFacade {
 
     public produtos$: Observable<any>;
