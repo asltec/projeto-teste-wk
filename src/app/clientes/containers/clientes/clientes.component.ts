@@ -26,5 +26,8 @@ export class ClientesComponent implements OnInit {
   rotaAdicionarCliente(){
     this.router.navigate(['/clientes-add']);
   }
+  rotaEditarCliente(id: string){
+    this.router.navigate([`/clientes-add/${id}`]);
+  }
 
 }

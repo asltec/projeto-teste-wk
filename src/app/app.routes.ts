@@ -14,6 +14,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'clientes', component: ClientesComponent },
     { path: 'clientes-add', component: ClientesFormComponent },
+    { path: 'clientes-add/:id', component: ClientesFormComponent },
     { path: 'pedidos', component: PedidosComponent },
     { path: 'produtos', component: ProdutosComponent }
 ];

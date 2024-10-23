@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClientesApi } from '../../api/clientes.api';
 import { ClientesFacade } from '../../clientes.facade';
 
@@ -20,7 +20,7 @@ import { ClientesFacade } from '../../clientes.facade';
     MatCardModule,
     MatButtonModule
   ],
-  providers:[ClientesApi, ClientesFacade],
+  providers: [ClientesApi, ClientesFacade],
   templateUrl: './clientes-form.component.html',
   styleUrl: './clientes-form.component.scss'
 })
@@ -32,7 +32,8 @@ export class ClientesFormComponent implements OnInit {
   constructor(private form: FormBuilder,
     private route: ActivatedRoute,
     private api: ClientesApi,
-    private facade: ClientesFacade) { }
+    private facade: ClientesFacade,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.iniciarForm();
@@ -78,10 +79,14 @@ export class ClientesFormComponent implements OnInit {
     } else {
       if (this.rotaId) {
         this.facade.updateCliente(this.rotaId, this.clientesForm.value);
-      }else{
+      } else {
         this.facade.addCliente(this.clientesForm.value);
       }
     }
+  }
+
+  public rotaListagemClientes() {
+    this.router.navigate(['/clientes']);
   }
 
 }

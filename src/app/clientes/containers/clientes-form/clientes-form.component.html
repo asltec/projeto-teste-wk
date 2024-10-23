@@ -1,10 +1,11 @@
-<div style="">
+<div class="container">
+    
     <form [formGroup]="clientesForm" (ngSubmit)="submit()">
-        <mat-card>
+        <mat-card class="card">
 
+            <mat-card-header class="mat-card-header">Cadastro de Clientes</mat-card-header>
             <div>
-
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 500px;" class="form-field" appearance="outline">
                     <mat-label>Nome</mat-label>
                     <input matInput formControlName="nome">
                     <mat-error>
@@ -12,7 +13,7 @@
                     </mat-error>
                 </mat-form-field>
     
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 410px;margin-left: 10px;" class="form-field" appearance="outline">
                     <mat-label>CPF</mat-label>
                     <input matInput formControlName="cpf">
                     <mat-error>
@@ -23,7 +24,7 @@
 
             <div>
 
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px;" class="form-field" appearance="outline">
                     <mat-label>Endereço</mat-label>
                     <input matInput formControlName="endereco">
                     <mat-error>
@@ -31,13 +32,13 @@
                     </mat-error>
                 </mat-form-field>
     
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px; margin-left: 10px;" class="form-field" appearance="outline">
                     <mat-label>Complemento</mat-label>
                     <input matInput formControlName="complemento">
                 </mat-form-field>
     
     
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px; margin-left: 10px;" class="form-field" appearance="outline">
                     <mat-label>Número</mat-label>
                     <input matInput formControlName="numero">
                     <mat-error>
@@ -48,7 +49,7 @@
 
             <div>
 
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px;" class="form-field" appearance="outline">
                     <mat-label>Cep</mat-label>
                     <input matInput formControlName="cep">
                     <mat-error>
@@ -56,7 +57,7 @@
                     </mat-error>
                 </mat-form-field>
     
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px; margin-left: 10px;" class="form-field" appearance="outline">
                     <mat-label>Bairro</mat-label>
                     <input matInput formControlName="bairro">
                     <mat-error>
@@ -64,7 +65,7 @@
                     </mat-error>
                 </mat-form-field>
     
-                <mat-form-field style="width: 400px;" class="form-field" appearance="outline">
+                <mat-form-field style="width: 300px; margin-left: 10px;" class="form-field" appearance="outline">
                     <mat-label>Cidade</mat-label>
                     <input matInput formControlName="cidade">
                     <mat-error>
@@ -72,8 +73,9 @@
                     </mat-error>
                 </mat-form-field>
             </div>
-            <div>
-                <button mat-stroked-button  type="submit">Gravar</button>
+            <div class="div-button-submit">
+                <button mat-stroked-button  (click)="rotaListagemClientes()">Voltar</button>
+                <button mat-stroked-button class="button-submit" type="submit">Gravar</button>
             </div>
         </mat-card>
 
