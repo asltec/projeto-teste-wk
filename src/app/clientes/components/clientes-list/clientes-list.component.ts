@@ -11,7 +11,7 @@ import { Cliente } from '../../models/clientes.model';
 })
 export class ClientesListComponent {
 
-  @Input() clientes!: Cliente[];
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'endereco', 'complemento', 'numero', 'cep','bairro', 'cidade', 'acoes'];
+  @Input() clientes: Cliente[];
+  displayedColumns: string[] = ['id', 'nome', 'cpf', 'endereco', 'complemento', 'numero', 'cep','bairro', 'cidade'];
 
 }

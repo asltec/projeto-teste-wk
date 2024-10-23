@@ -1,1 +1,2 @@
-<app-clientes></app-clientes>
+<app-menu-form (add)="rotaAdicionarCliente()"></app-menu-form>
+<app-clientes-list [clientes]="facade.clientes$ | async"></app-clientes-list>
